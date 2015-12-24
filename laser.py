@@ -2662,10 +2662,7 @@ class laser_gcode(inkex.Effect):
                 lg = 'G01'
             elif s[1] == 'arc':
                 r = [(s[2][0]-s[0][0]), (s[2][1]-s[0][1])]
-                if lg=="G00":
-                    g += "G1 " + feed + "\n"
-                    g += "G2 " + feed + "\n"
-                    g += "G3 " + feed + "\n"
+                if lg=="G00": g += "G1 " + feed + "\n"
                 if (r[0]**2 + r[1]**2)>.1:
                     r1, r2 = (P(s[0])-P(s[2])), (P(si[0])-P(s[2]))
                     if abs(r1.mag()-r2.mag()) < 0.001 :

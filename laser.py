@@ -88,7 +88,6 @@ defaults = {
 G90
 """,
 'footer': """G1 X0 Y0
-M18
 """
 }
 
